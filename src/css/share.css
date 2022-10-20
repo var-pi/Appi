@@ -1,0 +1,14 @@
+/* 
+
+Ole selle failiga väga ettevaatlik!
+Selle koodi muutmine võib mõjutada mitut HTML faili!
+
+ */
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
