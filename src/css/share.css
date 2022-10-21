@@ -1,11 +1,14 @@
 /* 
 
 Ole selle failiga väga ettevaatlik!
-Selle koodi muutmine võib mõjutada mitut HTML faili!
+Selle koodi muutmine võib mõjutada mitme komponendi välimust!
+
+Iga "stiili" klass peab sisaldama klassi ".share".
+Ehk .share.[sinu-klassi-nimetus]
 
  */
 
-.vertical {
+.share.vertical {
   display: flex;
   flex-direction: column;
   justify-content: center;
