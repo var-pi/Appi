@@ -6,9 +6,9 @@ class NavBar extends HTMLElement {
   }
 
   connectedCallback() {
-    let buttons = "";
+    let aTagList = "";
     for (const name in pages) {
-      buttons += `<a href="/#${pages[name].route}">${name}</a>`;
+      aTagList += `<a href="/#${pages[name].route}">${name}</a>`;
     }
 
     this.innerHTML = `
@@ -22,7 +22,7 @@ class NavBar extends HTMLElement {
             }
         </style>
         <div id="container">            
-          ${buttons}
+          ${aTagList}
         </div>
         `;
   }
