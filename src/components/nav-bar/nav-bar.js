@@ -1,4 +1,4 @@
-import pages from "../../router/list.js";
+import { pages } from "../../router/routes.js";
 
 class NavBar extends HTMLElement {
   constructor() {
@@ -7,10 +7,9 @@ class NavBar extends HTMLElement {
 
   connectedCallback() {
     let buttons = "";
-    for (const name of pages) {
-      buttons += `<button id="${name}">${name}</button>`;
+    for (const name in pages) {
+      buttons += `<a href="/#${pages[name].route}">${name}</a>`;
     }
-    console.warn(buttons);
 
     this.innerHTML = `
         <style>

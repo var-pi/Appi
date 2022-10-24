@@ -19,12 +19,18 @@ Kasutamaks routerit on vaja kindlaks teha järgmist: <br>
 ### Uuri lühiviiteid
 
 ```
-router.routes
+router.pages
 ```
 
 Tagastab:
 
-- **_object_** - objekti, mille võtmeteks on lühiviited ja väärtusteks täisviited.
+- **_object_** - objekti, mille võtmeteks on lehe nimi ja väärtusteks on lehe viite variatsioonid (**page**).
+
+```
+page: {
+
+}
+```
 
 <br>
 
