@@ -10,9 +10,8 @@ class NavBar extends CustomElement {
     await super.connectedCallback();
 
     let aTagList = "";
-    for (const name in pages) {
+    for (const name in pages)
       aTagList += `<a href="/#${pages[name].route}">${name}</a>`;
-    }
 
     const containerDiv = document.getElementById("container");
 

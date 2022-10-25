@@ -6,11 +6,12 @@ const rootDiv = document.getElementById("root");
 
 const loadHome = () => {
   document.location.href = window.location.origin + "/#/home";
+  // loadPath();
 };
 
-const loadPath = () => {
+const loadPath = async () => {
   const page = pages[window.location.hash.substring(2)];
-  if (page) rootDiv.data = page.path;
+  if (page) rootDiv.innerHTML = await (await fetch(page.path)).text();
   else loadHome();
 };
 
