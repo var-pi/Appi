@@ -19,7 +19,7 @@ class NavBar extends HTMLElement {
                 display: flex;
                 justify-content: center;
                 width: 100vw;
-            }
+            }<
         </style>
         <div id="container">            
           ${aTagList}
