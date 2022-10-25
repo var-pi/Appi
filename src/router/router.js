@@ -4,11 +4,17 @@ import { pages } from "./routes.js";
 
 const rootDiv = document.getElementById("root");
 
-export const router = {
-  loadPath: () => {
-    rootDiv.data = pages[window.location.hash.substring(2)].path;
-  },
+const loadHome = () => {
+  document.location.href = window.location.origin + "/#/home";
 };
 
-window.addEventListener("hashchange", router.loadPath);
+const loadPath = () => {
+  const page = pages[window.location.hash.substring(2)];
+  if (page) rootDiv.data = page.path;
+  else loadHome();
+};
+
+window.addEventListener("hashchange", loadPath);
+
+loadHome();
 
