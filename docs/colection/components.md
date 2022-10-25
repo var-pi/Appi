@@ -51,7 +51,15 @@ customElements.define("minu-komponent", MinuKomponent);
 
 <div style="opacity: 0.5">Ülemklassi CustomElement laiendamine automaatselt lisab eelloodud HTML, CSS ja JS failid meie komponendi külge.</div>
 
-4. Sisuta loodud HTML, CSS ja JS failid.
+4. Ekspordi hiljuti loodud <code>.class.js</code> fail. Seda on tarvis teha failis [_/src/components/linker.js_](/src/components/linker.js). Meie komponendi puhul:
+
+```
+export * from "/src/components/minu-komponent/minu-komponent.class.js";
+```
+
+<div style="opacity: 0.5">Antud samm on tarvilik võimaldamaks komponendi kasutamist igal pool projektis. Saavutatud on see tänu faili linker.js faili index.html importimisele.</div>
+
+5. Sisuta loodud HTML, CSS ja JS failid.
 
 > Kuna antud failid kuuluvad ühe komponendi juurde, pole nende omavahelised viited tarvilikud.
 
