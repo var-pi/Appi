@@ -44,8 +44,7 @@ Loomaks HTML elementi, mille vajutades suunataks kasutajat soovitavale lehekülj
 
     <a href="..." >...</a>
 
-[Loe viidete kohta](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) \
-[Loe # kohta](https://stackoverflow.com/questions/21850093/usage-of-hash-in-url)
+[Loe viidete kohta](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 
 Atribuudi href väärtuseks peaks olema URL-i lühend kujul <code>/#/[lehe-nimi]</code>.
 
@@ -55,3 +54,4 @@ Ehk lehekülje <code>/src/pages/home.html</code> puhul:
 
     <a href="/#/home">Koju</a>
 
+[Loe # kohta](https://stackoverflow.com/questions/21850093/usage-of-hash-in-url)
