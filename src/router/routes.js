@@ -1,4 +1,10 @@
-import pageNames from "./list.js";
+/*
+
+Genereerib URL-i ja faili asukoha tee iga lehekülje jaoks.
+
+*/
+
+import pageNames from "./pageNames.js";
 
 const toPath = (name) => `/src/pages/${name}.html`;
 const toRoute = (name) => "/" + name;

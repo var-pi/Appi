@@ -1,1 +1,3 @@
-[Router](./colection/router.md)
+[Ruuter](./colection/router.md) \
+[Komponendid](./colection/components.md)
+
