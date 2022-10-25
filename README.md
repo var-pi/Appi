@@ -1,3 +1,3 @@
 # focus
 
-Focus!
+[Dokumentatsioon](./docs/main.md)
