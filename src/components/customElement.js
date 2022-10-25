@@ -1,30 +1,38 @@
+/*
+
+Seob samanimelised HTML, CSS ja JS failid ühte klassi.
+
+*/
+
 export default class CustomElement extends HTMLElement {
-  constructor(pathInComponents, name) {
+  constructor(folderPath) {
     super();
-    this.name = name;
-    this.base = "/src/components";
-    this.path = this.base + pathInComponents;
-    this.getHtml = async () =>
-      await fetch(`${this.path}/${this.name}.html`).then((r) => r.text());
+    const filePath = folderPath + "/" + folderPath.split("/").reverse()[0];
+
+    this.addHtml = async () => {
+      this.innerHTML = await fetch(filePath + ".html").then((r) => r.text());
+    };
+
     this.addStyles = () => {
-      let link = document.createElement("link");
+      const link = document.createElement("link");
       link.type = "text/css";
       link.rel = "stylesheet";
-      link.href = `${this.path}/${this.name}.css`;
+      link.href = filePath + ".css";
       document.head.appendChild(link);
     };
-    // this.addScript = () => {
-    //   let script = document.createElement("script");
-    //   script.type = "module";
-    //   script.src = `${this.path}/${this.name}.js`;
-    //   document.head.appendChild(script);
-    // };
+
+    this.addScript = () => {
+      const script = document.createElement("script");
+      script.type = "module";
+      script.src = filePath + ".js";
+      document.head.appendChild(script);
+    };
   }
 
   async connectedCallback() {
+    await this.addHtml();
     this.addStyles();
-    // this.addScript();
-    this.innerHTML = await this.getHtml();
+    this.addScript();
   }
 }
 

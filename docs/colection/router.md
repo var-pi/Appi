@@ -1,50 +1,57 @@
-# Router
+## [⇦](../main.md)
+
+# **Ruuter**
+
+[Mis on ruuter?](https://web.dev/urlpattern/)
 
 <br>
 
-## Tingimused
-
-Kasutamaks routerit on vaja kindlaks teha järgmist: <br>
-
-1.  Kaustas [_/src/pages/_](../../src/pages/) leitava vajaliku lehe nimi on sisestatud failis [_/src/router/list.js_](../../src/router/list.js) asuvasse järjendisse.
-2.  Faili, kus soovitakse routerit kasutada, on lisatud _script_, mis viitab failile [/src/router/router.js](../../src/router/router.js).<br>
-    Viide peaks olema kujul <code>\<script type="module" src="sinu/tee/routerini"></script></code>.
+## **_NB!_**
 
 <br>
 
-## Kasutamine
+> Kõigi kaustas [_/src/pages/_](../../src/pages/) asuvate lehekülgede nimed peavad olema sisestatud failis [_/src/router/pageNames.js_](../../src/router/list.js) asuvasse järjendisse.
+
+<div style="opacity: 0.5"> Selle järjendi põhjal genereeritakse igale lehküljele vastav URL ja faili asukohaviit.</div>
 
 <br>
 
-### Uuri lühiviiteid
-
-```
-router.pages
-```
-
-Tagastab:
-
-- **_object_** - objekti, mille võtmeteks on lehe nimi ja väärtusteks on lehe viite variatsioonid (**page**).
-
-```
-page: {
-
-}
-```
+## **Kasutamine**
 
 <br>
 
-### Lae uus leht
+### **URL**
 
-```
-router.push(route) => void
-```
+<br>
 
-Argumendid:
+Vahetamaks lehekülge piisab muutmast URL-i.
 
-- **_route_** - lühiviide mõnele lehele. Algab märgiga "/", millele jägneb lehe nimi.
+URL-i struktuur on järgmine:
 
-Tagastab:
+    http://[host]/#/[lehe-nimi]
 
-- **_void_** - mitte midagi.
+Ehk juhul leheküljega <code>/src/pages/home.html</code> ning lokaalse jooksutamisega võib URL välja näha järgmiselt:
+
+    http://localhost:5500/#/home
+
+<br>
+
+### **Link**
+
+<br>
+
+Loomaks HTML elementi, mille vajutades suunataks kasutajat soovitavale leheküljele, võib kasutada näiteks viidet:
+
+    <a href="..." >...</a>
+
+[Loe viidete kohta](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) \
+[Loe # kohta](https://stackoverflow.com/questions/21850093/usage-of-hash-in-url)
+
+Atribuudi href väärtuseks peaks olema URL-i lühend kujul <code>/#/[lehe-nimi]</code>.
+
+Kindlasti lisa ka mingit teksti, mis kirjeldaks seda linki.
+
+Ehk lehekülje <code>/src/pages/home.html</code> puhul:
+
+    <a href="/#/home">Koju</a>
 

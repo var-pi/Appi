@@ -1,30 +1,67 @@
-# Komponendid
+## [⇦](../main.md)
+
+# **Komponendid**
+
+[Milleks komponendid?](http://componentsprogramming.com/components-programming/) \
+[Implementatsiooni kohta](https://javascript.info/custom-elements)
 
 <br>
 
-## Tingimused
-
-- Kõik komponentide <code>_script_</code> 'id peavad omama tüüpi <code> _module_</code>. Näiteks:
-
-```
-<script src="../components/library/img/img.js" type="module"></script>
-```
+## **Uue komponendi loomine**
 
 <br>
 
-## Uue komponendi loomine
+Loomaks uut komponenti on tarvis täita mitut sammu:
 
-> Kogu kandilistes sulgudes olev tekst peab olema asendatud.
+1.  Loo komponendinimeline kaust asukohas [_/src/components_](/src/components) või selle alamkaustas. Näiteks:
+
+```
+/src/components/minu-komponent
+```
+
+2.  Lisa vastloodud kausta 4 samanimelist faili, mis erinevad vaid [laienduste](https://www.howtogeek.com/356448/what-is-a-file-extension/) poolest:
+
+```
+minu-komponent
+│
+├── minu-komponent.class.js
+│
+├── minu-komponent.html
+│
+├── minu-komponent.css
+│
+└── minu-komponent.js
+```
+
+> See, et kasutame pidevalt sama nime on tarvilik komponendi korralikuks tööks.
+
+3. Loo laiendusega <code>.class.js</code> lõppevas failis klassi <code>CustomElement</code> alamklass, anna [ülemklassi](https://javascript.info/class-inheritance) konstruktorile hiljuti loodud kausta asukoht ja [defineeri](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) uus komponent. Meie komponendi puhul näeb see fail välja järmiselt:
 
 ```
 import CustomElement from "/src/components/customElement.js";
 
-class [SinuKlassiNimi] extends CustomElement {
+class MinuKomponent extends CustomElement {
   constructor() {
-    super(["komponendi/asukoht/kausta/components/suhtes"], ["komponendiNimi"]);
+    super("/src/components/minu-komponent");
   }
 }
 
-customElements.define("library-img", [SinuKlassiNimi]);
+customElements.define("minu-komponent", MinuKomponent);
 ```
+
+<div style="opacity: 0.5">Ülemklassi CustomElement laiendamine automaatselt lisab eelloodud HTML, CSS ja JS failid meie komponendi külge.</div>
+
+4. Sisuta loodud HTML, CSS ja JS failid.
+
+> Kuna antud failid kuuluvad ühe komponendi juurde, pole nende omavahelised viited tarvilikud.
+
+<br>
+
+## **Komponendi kasutamine**
+
+<br>
+
+Iseloodud komponendid on sisuliselt sisseehitatud komponentidega võrdväärsed, seetõttu on ka nende kasutamine analoogiline. Eelpool loodud komponenti kasutaksime järgmiselt:
+
+    <minu-komponent></minu-komponent>
 
