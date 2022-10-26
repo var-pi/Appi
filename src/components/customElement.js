@@ -15,6 +15,12 @@ export default class CustomElement extends HTMLElement {
     };
 
     this.addStyles = () => {
+      const links = [...document.head.getElementsByTagName("link")];
+      const exists = links.some(
+        (link) => link.href == window.location.origin + filePath + ".css"
+      );
+      if (exists) return;
+
       const link = document.createElement("link");
       link.type = "text/css";
       link.rel = "stylesheet";
