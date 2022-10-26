@@ -58,3 +58,17 @@ Iseloodud komponendid on sisuliselt sisseehitatud komponentidega võrdväärsed,
 
     <minu-komponent></minu-komponent>
 
+<br>
+
+## **JS**
+
+<br>
+
+Kogu komponendispetsiifilist koodi tuleb kirjutada funktsioonis <code>default</code>:
+
+    export default function (el) {}
+
+Argument <code>el</code> on siin meie komponendi element.
+
+> Kogu kood, mis kirjutatakse funktsioonist väljaspool, laetakse vaid **_üks kord_** sõltumata sellest mitu komponendi [instantsit](https://www.computerhope.com/jargon/i/instance.htm) loodud on.
+
