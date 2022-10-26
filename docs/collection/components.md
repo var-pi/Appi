@@ -26,7 +26,7 @@ Loomaks uut komponenti on tarvis täita mitut sammu:
 
   . . .
 
-  /src/components/minu-komponent
+  "/src/components/minu-komponent"
 ]
 ```
 
