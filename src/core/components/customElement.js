@@ -7,13 +7,20 @@ Seob samanimelised HTML, CSS ja JS failid ühte klassi.
 export default class CustomElement extends HTMLElement {
   constructor(folderPath) {
     super();
-    const filePath = folderPath + "/" + folderPath.split("/").reverse()[0];
+    const name = folderPath.split("/").reverse()[0];
+    const filePath = folderPath + "/" + name;
 
     this.addHtml = async () => {
       this.innerHTML = await fetch(filePath + ".html").then((r) => r.text());
     };
 
     this.addStyles = () => {
+      const links = [...document.head.getElementsByTagName("link")];
+      const exists = links.some(
+        (link) => link.href == window.location.origin + filePath + ".css"
+      );
+      if (exists) return;
+
       const link = document.createElement("link");
       link.type = "text/css";
       link.rel = "stylesheet";
@@ -21,18 +28,14 @@ export default class CustomElement extends HTMLElement {
       document.head.appendChild(link);
     };
 
-    this.addScript = () => {
-      const script = document.createElement("script");
-      script.type = "module";
-      script.src = filePath + ".js";
-      document.head.appendChild(script);
+    this.mount = async () => {
+      await this.addHtml();
+      this.addStyles();
+      const module = await import(filePath + ".js");
+      module?.default?.(this);
     };
-  }
 
-  async connectedCallback() {
-    await this.addHtml();
-    this.addStyles();
-    this.addScript();
+    this.mount();
   }
 }
 

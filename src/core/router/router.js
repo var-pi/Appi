@@ -22,5 +22,5 @@ const loadPath = async () => {
 
 window.addEventListener("hashchange", loadPath);
 
-loadHome();
+loadPath();
 

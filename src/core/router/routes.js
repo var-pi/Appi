@@ -4,9 +4,9 @@ Genereerib URL-i ja faili asukoha tee iga lehekülje jaoks.
 
 */
 
-import pageNames from "./pageNames.js";
+import pageNames from "/src/pages/names.js";
 
-const toPath = (name) => `/src/pages/${name}.html`;
+const toPath = (name) => `/src/pages/${name}/${name}.html`;
 const toRoute = (name) => "/" + name;
 
 export let pages = {};
