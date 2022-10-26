@@ -3,7 +3,7 @@
 Loob jada kõigi lehekülgede linkidega.
 
 */
-console.warn("!!");
+
 import { pages } from "../../router/routes.js";
 
 export default function (el) {
