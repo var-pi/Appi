@@ -10,7 +10,7 @@
 
 <br>
 
-> Kõigi kaustas [_/src/pages/_](../../src/pages/) asuvate lehekülgede nimed peavad olema sisestatud failis [_/src/router/pageNames.js_](../../src/router/list.js) asuvasse järjendisse.
+> Kõigi kaustas [_/src/pages/_](../../src/pages/) asuvate lehekülgede nimed peavad olema sisestatud failis [_/src/pages/names.js_](../../src/pages/names.js) asuvasse järjendisse.
 
 <div style="opacity: 0.5"> Selle järjendi põhjal genereeritakse igale lehküljele vastav URL ja faili asukohaviit.</div>
 
