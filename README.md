@@ -1,4 +1,3 @@
 # focus
-Focus!
 
-asdasdad
+[Dokumentatsioon](./docs/main.md)
