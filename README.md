@@ -1,4 +1,5 @@
 # focus
-Focus!
+
+[Dokumentatsioon](./docs/main.md)
 
 testing 123

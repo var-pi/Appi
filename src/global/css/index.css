@@ -1,0 +1,19 @@
+@import url(./share.css);
+
+body {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+object {
+  width: 100vw;
+  height: 100vh;
+}
+
