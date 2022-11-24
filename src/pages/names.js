@@ -4,6 +4,6 @@ Järjendis peavad sisalduma kõigi lehekülgede nimed.
 
 */
 
-export default ["home", "library","google-trends"]
+export default ["home", "library","google-trends", "mis-on-api"]
 
 
