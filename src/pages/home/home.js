@@ -5,4 +5,3 @@ export default async function () {
     await fetch("/src/pages/library/library.html")
   ).text();
 }
-
