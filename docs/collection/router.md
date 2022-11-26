@@ -10,7 +10,12 @@
 
 <br>
 
-> Kõigi kaustas [_/src/pages/_](../../src/pages/) asuvate lehekülgede nimed peavad olema sisestatud failis [_/src/pages/names.js_](../../src/pages/names.js) asuvasse järjendisse.
+> Kõigi kaustas [_/src/pages/_](../../src/pages/) asuvate lehekülgede nimed peavad olema sisestatud failis [_/src/pages/names.js_](../../src/pages/names.js) asuvasse järjendisse järgmisel kujul:
+
+    {
+        ref: "lehe-nimi",
+        displayName: "nimi-mida-näeb+kasutaja"
+    }
 
 <div style="opacity: 0.5"> Selle järjendi põhjal genereeritakse igale lehküljele vastav URL ja faili asukohaviit.</div>
 
@@ -55,3 +60,4 @@ Ehk lehekülje <code>/src/pages/home.html</code> puhul:
     <a href="/#/home">Koju</a>
 
 [Loe # kohta](https://stackoverflow.com/questions/21850093/usage-of-hash-in-url)
+
