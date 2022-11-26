@@ -16,7 +16,6 @@ const loadHome = () => {
 
 const loadPath = async () => {
   const page = pages[window.location.hash.substring(2)];
-  console.log(page);
   if (page) {
     rootDiv.innerHTML = await (await fetch(page.path)).text();
     const module = await import("/src/pages" + page.route + page.route + ".js");

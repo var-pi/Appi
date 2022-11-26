@@ -8,10 +8,53 @@ Ehk .share.[sinu-klassi-nimetus]
 
  */
 
+@import url(/src/global/css/variables.css);
+
 .share.vertical {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.share.text-block {
+  background-color: var(--primary);
+  width: 100%;
+  padding: 0 24px;
+  border-radius: 15px;
+  font-size: 24px;
+  line-height: 2;
+  z-index: 1;
+}
+
+.share.block-title {
+  color: var(--accent) !important;
+  font-weight: bolder;
+}
+
+h1.share.block-title {
+  font-size: 42px;
+}
+
+h2.share.block-title {
+  font-size: 28px;
+}
+
+.share.blog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0 64px 0;
+  color: #ccc;
+  min-height: 100vh;
+  margin: 0 32px;
+  max-width: 1024px;
+}
+
+.share.blog-background {
+  background: var(--primary-gradient-background);
+  display: flex;
+  justify-content: center;
 }
 

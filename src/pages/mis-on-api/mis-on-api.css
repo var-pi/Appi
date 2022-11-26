@@ -1,0 +1,26 @@
+@import url(/src/global/css/variables.css);
+
+#mis-on-api-container {
+  background: var(--primary-gradient-background);
+}
+
+.mis-on-api-video {
+  width: 560px;
+  height: 315px;
+}
+
+.mis-on-api-video-container {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#videos-wrapper {
+  display: flex;
+  direction: row;
+  padding: 24px 0;
+}
+
+#videos-wrapper > * {
+  margin: 16px;
+}
+
