@@ -18,9 +18,10 @@ Ehk .share.[sinu-klassi-nimetus]
 }
 
 .share.text-block {
+  --horizontal-padding: 24px;
   background-color: var(--primary);
-  width: 100%;
-  padding: 0 24px;
+  width: calc(100% - var(--horizontal-padding) * 2);
+  padding: 0 var(--horizontal-padding);
   border-radius: 15px;
   font-size: 24px;
   line-height: 2;
@@ -48,8 +49,9 @@ h2.share.block-title {
   padding: 64px 0 64px 0;
   color: #ccc;
   min-height: 100vh;
-  margin: 0 32px;
-  max-width: 1024px;
+  /* margin: 0 32px; */
+  width: 1024px;
+  max-width: 90%;
 }
 
 .share.blog-background {

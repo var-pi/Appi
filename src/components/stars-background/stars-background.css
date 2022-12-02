@@ -4,12 +4,9 @@ https://codepen.io/mattmarble/pen/qBdamQz
 
 */
 
-stars-background #wrapper {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-  left: 0px;
+stars-background #stars-wrapper {
+  position: absolute;
+  z-index: 0;
 }
 
 #stars,
