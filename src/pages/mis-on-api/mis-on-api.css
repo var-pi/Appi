@@ -4,9 +4,20 @@
   background: var(--primary-gradient-background);
 }
 
+.mis-on-api-video-container {
+  width: 100%;
+  padding-top: calc((50% - var(--video-margin)) * 0.5625); /* 0.5625 = 16:9 */
+  position: relative;
+}
+
 .mis-on-api-video {
-  width: 560px;
-  height: 315px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .mis-on-api-video-container {
@@ -17,10 +28,17 @@
 #videos-wrapper {
   display: flex;
   direction: row;
-  padding: 24px 0;
+  padding-top: 24px;
+  width: 100%;
+  z-index: 1;
+  --video-margin: 12px;
 }
 
-#videos-wrapper > * {
-  margin: 16px;
+#videos-wrapper > .left {
+  margin-right: var(--video-margin);
+}
+
+#videos-wrapper > .right {
+  margin-left: var(--video-margin);
 }
 

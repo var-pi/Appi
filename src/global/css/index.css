@@ -1,5 +1,5 @@
-@import url(./share.css);
-@import url(/src//global//css/variables.css);
+@import url(/src/global/css/share.css);
+@import url(/src/global/css/variables.css);
 
 body {
   margin: 0;
