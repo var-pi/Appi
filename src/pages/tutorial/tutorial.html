@@ -1,0 +1,165 @@
+<stars-background></stars-background>
+
+<div class="share blog-background">
+  <div class="share blog-container">
+    <h1 class="share block-title">Praktiline näide</h1>
+
+    <div class="share text-block">
+      <p>Tere!</p>
+      <p>
+        Tõenäoliselt oled siia leheküljele sattunud, kui sa tunned huvi
+        rakendusliideste ehk APIde kasutamise vastu. Meil on hea meel sind
+        aidata!
+      </p>
+    </div>
+
+    <h2 class="share block-title">Eesmärk</h2>
+
+    <div class="share text-block">
+      <p>
+        Käesoleva õpetusega soovime Sulle demonstreerida, et tegelikult on APIde
+        kasutamine imelihtne ning ka Sina saad juba oma esimese API valmis
+        kirjutada JavaScriptisvähem kui viie minutiga!
+      </p>
+    </div>
+
+    <h2 class="share block-title">Ettevalmistus</h2>
+
+    <div class="share text-block">
+      <p>
+        Kõigepealt tuleb Sul allalaadida Google Trends'i API pakett, mille leiad
+        <a href="https://github.com/pat310/google-trends-api">siit</a>. Sisesta
+        TERMINALi ning oota, kuni laadimine on lõppenud.
+      </p>
+      <code class="share display">npm install google-trends-api</code>
+      <p>Nüüd olema valmis alustama!</p>
+    </div>
+
+    <h2 class="share block-title">Viide</h2>
+
+    <div class="share text-block">
+      <p>
+        Esmalt vaatame sisse dokumentatsiooni. Sealt hakkab meile kohe silma, et
+        esimese asjana tuleb meil viidata APIle, mida kasutada soovime. Selleks
+        kirjutame <code>const</code> muutuja nimega <code>googleTrends</code>
+        <code>require()</code> funktsiooni.
+      </p>
+      <code class="share display">
+        const googleTrends = require("google-trends-api");
+      </code>
+    </div>
+
+    <h2 class="share block-title">Konkreetne API funktsioon</h2>
+
+    <div class="share text-block">
+      <p>
+        Nüüd peame otsustama, mida me APIga teha tahame. Pakume välja, et
+        võiksime vaadata, mida inimesed täna Google'st otsinud on. Kui loeme
+        lähemalt README'd, leiame, et me peaksime kasutama dailyTrends meetodit.
+      </p>
+      <img
+        class="share blog-image"
+        src="https://regor.zenfolio.com/img/v4/p655463516-4.jpg"
+        alt=""
+      />
+      <p>Tutvume pisut veel selle meetodi kirjeldusega.</p>
+      <img
+        class="share blog-image"
+        src="https://regor.zenfolio.com/img/v4/p655463516-4.jpg"
+        alt=""
+      />
+      <img
+        class="share blog-image"
+        src="https://regor.zenfolio.com/img/v4/p655463516-4.jpg"
+        alt=""
+      />
+    </div>
+
+    <h2 class="share block-title">Callback</h2>
+
+    <div class="share text-block">
+      <p>
+        Siit võime leida paar väga olulist nüanssi! Esiteks, märkame, et tänaste
+        trendide leidmiseks läheb meil tarvis geograafilist asukohta ning
+        kuupäeva, mille järgi dailyTrends meetodit kutsuda.
+      </p>
+
+      <p>
+        Kirjutame selleks ühe lihtsa funktsiooni, mille nimetame
+        <code>onResult</code>.
+      </p>
+
+      <code class="share display">const onResult = (res) => { … } </code>
+
+      <p>
+        Selleks, et mõista, mida me enda funktsioonil tegema peaksime laskma,
+        uurime lähemalt, <code>dailyTrends</code> tagastust nimega
+        <i>output</i> . Leiame, et kaks funktsiooni -
+        <code>trendingSearches</code> ja
+        <code>trendingSearchesDays</code>
+        võiksid meile kasulikud olla. Mõlemad tagastavad <i>array</i>-tüüpi
+        listi.
+      </p>
+
+      <code class="share display">
+        const objects = res.trendingSearchesDays[0].trendingSearches
+      </code>
+
+      <p>
+        Nüüd on meil olemas list tänastest trendidest. Kirjutame kohe siia
+        samasse funktsiooni onResult sisse ka enda trendide kuvamise. Seda teeme
+        consult.log käsu ning for-loop'i abiga.
+      </p>
+
+      <code class="share display">
+        for(const object of objects){ <br />
+        &emsp; console.log(<br />
+        &emsp; &emsp; object.formattedTraffic, <br />
+        &emsp; &emsp; "\t", <br />
+        &emsp; &emsp; object.title.query <br />
+        &emsp; );
+        <br />
+        }
+      </code>
+
+      <p>
+        Lisame enne for-loop'i ka pealkirja, mida me õigupoolest välja trükime
+        ning silmailuks uue rea:
+      </p>
+
+      <code class="share display">
+        console.log("nTäna trendiks\n"); <br />
+        console.log("\n");
+      </code>
+
+      <p>Lisame ka callback funktsiooni:</p>
+
+      <img
+        class="share blog-image"
+        src="https://regor.zenfolio.com/img/v4/p655463516-4.jpg"
+        alt=""
+      />
+    </div>
+
+    <h2 class="share block-title">Väljakutse</h2>
+
+    <div class="share text-block">
+      <p>Nüüd jääb meil üle üksnes oma API meeod väja kutsuda.</p>
+
+      <code class="share display">
+        googleTrends.dailyTrends({ geo:”US”}, callback);
+      </code>
+    </div>
+
+    <h2 class="share block-title">Lõpetuseks</h2>
+
+    <div class="share text-block">
+      <p>Testime! Selleks kirutame VS Code's samas Terminali</p>
+
+      <code class="share display">node &lt;sinu-klassi-nimi.js&gt; </code>
+
+      <p>Kas töötas? Oled oma tulemusega rahul?</p>
+    </div>
+  </div>
+</div>
+
