@@ -1,4 +1,59 @@
-div {
-  color: purple;
+@import url(/src/global/css/variables.css);
+
+#home-container {
+  width: 100vw;
+  height: 100vh;
+  background: var(--primary-gradient-background);
+  z-index: -5;
+}
+
+#wrapper-mask {
+  border-radius: 16px;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  transition: border-radius 0.3s, transform 0.3s;
+  transform: scale(100%); /* prevernts overflow of staars-background */
+}
+
+#wrapper-mask:hover {
+  border-radius: 32px;
+  transform: scale(0.99);
+}
+
+.half-screen {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.half-screen.right {
+  float: right;
+}
+
+.half-screen.left {
+  float: left;
+}
+
+.left button.half-screen-content {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.half-screen .half-screen-content {
+  --w: 48vw;
+  width: var(--w);
+  height: calc(var(--w) * 9 / 16);
+  z-index: 1;
+  background-color: transparent;
+}
+
+#article-preview {
+  width: 100%;
+  height: 100%;
 }
 

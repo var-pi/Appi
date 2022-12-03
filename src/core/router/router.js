@@ -16,8 +16,11 @@ const loadHome = () => {
 
 const loadPath = async () => {
   const page = pages[window.location.hash.substring(2)];
-  if (page) rootDiv.innerHTML = await (await fetch(page.path)).text();
-  else loadHome();
+  if (page) {
+    rootDiv.innerHTML = await (await fetch(page.path)).text();
+    const module = await import("/src/pages" + page.route + page.route + ".js");
+    module?.default?.(this);
+  } else loadHome();
 };
 
 window.addEventListener("hashchange", loadPath);

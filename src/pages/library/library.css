@@ -2,3 +2,13 @@ a#home {
   color: green;
 }
 
+#library-container {
+  width: 100%;
+  height: 100%;
+  /* background-color: papayawhip;*/
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  color: #aaa;
+  justify-content: center;
+  display: flex;
+}
+

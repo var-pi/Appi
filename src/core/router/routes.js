@@ -6,13 +6,14 @@ Genereerib URL-i ja faili asukoha tee iga lehekülje jaoks.
 
 import pageNames from "/src/pages/names.js";
 
-const toPath = (name) => `/src/pages/${name}/${name}.html`;
-const toRoute = (name) => "/" + name;
+const toPath = (ref) => `/src/pages/${ref}/${ref}.html`;
+const toRoute = (ref) => "/" + ref;
 
 export let pages = {};
-for (const name of pageNames)
-  pages[name] = {
-    path: toPath(name),
-    route: toRoute(name),
+for (const { ref, displayName } of pageNames)
+  pages[ref] = {
+    path: toPath(ref),
+    route: toRoute(ref),
+    displayName,
   };
 

@@ -1,5 +1,28 @@
 <link rel="stylesheet" type="text/css" href="/src/pages/home/home.css" />
 
-<div>Tere tulemast koju!</div>
-<a href="/#/library">Raamatukokku!</a>
+<stars-background></stars-background>
+
+<div id="home-container">
+  <div class="half-screen left">
+    <div id="wrapper-mask">
+      <button
+        onclick="location.href='/#/mis-on-api'"
+        class="half-screen-content"
+      >
+        <div id="article-preview"></div>
+      </button>
+    </div>
+  </div>
+  <div class="half-screen right">
+    <div id="wrapper-mask">
+      <iframe
+        class="half-screen-content"
+        src="https://www.youtube.com/embed/qI8ZNfmYTbo?controls=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
 
