@@ -60,3 +60,13 @@ h2.share.block-title {
   justify-content: center;
 }
 
+code.share.display {
+  margin: 32px 0;
+  display: block;
+}
+
+.share.blog-image {
+  border-radius: 15px;
+  width: 100%;
+}
+

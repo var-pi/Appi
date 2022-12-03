@@ -22,3 +22,11 @@ a {
   color: var(--accent);
 }
 
+code {
+  font-family: Consolas, "courier new";
+  background-color: #333;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 105%;
+}
+

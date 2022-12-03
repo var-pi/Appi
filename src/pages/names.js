@@ -9,10 +9,10 @@ export default [
     ref: "home",
     displayName: "kodu",
   },
-  //   {
-  //     ref: "library",
-  //     displayName: "raamatukogu",
-  //   },
+  {
+    ref: "tutorial",
+    displayName: "näide",
+  },
   {
     ref: "google-trends",
     displayName: "google trends",
