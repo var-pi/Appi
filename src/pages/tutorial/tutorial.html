@@ -35,12 +35,12 @@
       <p>Nüüd oleme valmis alustama!</p>
     </div>
 
-    <h3 class="share block-title">Viide</h3>
+    <h2 class="share block-title">Viide</h2>
 
     <div class="share text-block">
       <p>
-        Esmalt vaatame sisse dokumentatsiooni. Märkame, et
-        esimese asjana tuleb meil viidata rakendusliidesele ehk APIle, mida kasutada soovime. Selleks
+        Esmalt vaatame sisse dokumentatsiooni. Märkame, et esimese asjana tuleb
+        meil viidata rakendusliidesele ehk APIle, mida kasutada soovime. Selleks
         kirjutame <code>const</code> muutuja nimega <code>googleTrends</code>
         <code>require()</code> funktsiooni.
       </p>
@@ -49,7 +49,7 @@
       </code>
     </div>
 
-    <h3 class="share block-title">Tutvume API funktsiooniga</h3>
+    <h2 class="share block-title">Tutvume API funktsiooniga</h2>
 
     <div class="share text-block">
       <p>
@@ -59,19 +59,18 @@
       </p>
       <img
         class="share blog-image"
-        src="pildid/dailyTrends_method.jpg"
+        src="/src/assets/images/daily-trends-preview.png"
         alt="dailyTrends"
       />
       <p>Tutvume pisut veel selle meetodi kirjeldusega.</p>
       <img
         class="share blog-image"
-        src="pildid/dailyT_in_out.jpg"
+        src="/src/assets/images/daily-trends-params.png"
         alt=""
       />
-     
     </div>
 
-    <h3 class="share block-title">Kirjutame funktsiooni</h3>
+    <h2 class="share block-title">Kirjutame funktsiooni</h2>
 
     <div class="share text-block">
       <p>
@@ -130,11 +129,12 @@
 
       <p>Lisame ka callback funktsiooni:</p>
 
-      <img
-        class="share blog-image"
-        src="pildid/callback_fn.jpg"
-        alt=""
-      />
+      <code class="share display">
+        const callback = (err, resJson) => { <br />
+        &emsp; if (err) console.error("Oh no there was an error", err); <br />
+        &emsp; else onResult(JSON.parse(resJson).default); <br />
+        }
+      </code>
     </div>
 
     <h2 class="share block-title">Väljakutse</h2>
@@ -154,9 +154,10 @@
 
       <code class="share display">node &lt;sinu-klassi-nimi.js&gt; </code>
 
-      <p>Palju õnne! 
-        Kasutasid just esimest korda rakendusliidest.
-        Kas töötas? Oled oma tulemusega rahul?</p>
+      <p>
+        Palju õnne! Kasutasid just esimest korda rakendusliidest. Kas töötas?
+        Oled oma tulemusega rahul?
+      </p>
     </div>
   </div>
 </div>
