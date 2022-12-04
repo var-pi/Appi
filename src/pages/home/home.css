@@ -10,6 +10,8 @@
 #wrapper-mask {
   border-radius: 16px;
   display: flex;
+  /* justify-content: start; */
+  /* align-items: start; */
   width: fit-content;
   height: fit-content;
   overflow: hidden;
