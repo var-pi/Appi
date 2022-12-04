@@ -1,85 +1,138 @@
-<link rel="stylesheet" href="/src/pages/mis-on-api/mis_api.css">
-<script src="../routes/app.js"></script>
-<head>
-    <div id="mis-api">
-        <h1>Mis on API?</h1>
-    </div>
-</head>
+<link rel="stylesheet" href="/src/pages/mis-on-api/mis-on-api.css" />
+<!-- <script src="../routes/app.js"></script> -->
 
-<body>
-    
-    <iframe width="420" height="315"
-        src="https://youtu.be/7YcW25PHnAA">
-    </iframe>
+<stars-background></stars-background>
 
-    <iframe width="420" height="315"
-        src="https://youtu.be/lsMQRaeKNDk">
-    </iframe>
-    
-    <div id="sisukam_tekst_mis_on_API">
-        <h3>
-        Application Programming Interface ehk API ehk rakendusliides võib tunduda maagilise tähekombinatsioonina, 
-        millest oled varem palju kuulnud, ent selle tegelik sisu või vajalikkus ei pruugi sulle veel päris teada olla. 
-        Kahtlemata puutud järgmiste aastate jooksul APIdega ühel või teisel viisil, mistõttu proovime
-        anda põgusa sissejuhatuse millega tegu on.
-        </h3>
-        
-        <p>
-        Ennekõike on API enimlevniumaid andmevahetusvorme arvutite vahel. Internetipõhises maailmas 
-        on arendatud kõikvõimalikud desktopi- ja veebirakendused rakendused inimestele kasutamiseks. 
-        Kasutajatel ei ole enamasti erilisi probleeme teksti lugemisega siniselt või valgelt taustalt, 
-        samuti ei tohiks font ega teksti suurus osutuda eriliseks takistuseks tekstist arusaamisel. 
-        Arvutiprogrammid seejuures jäävad aga üksteisega suheldes hätta, kui nad ei tea, 
-        kust või millist infot lugeda. Vahest on sellest lihtsam mõelda kui mõne võõrkeele õppimisest – hiinakeelset intervjuud on põnev kuulata, 
-        ent kui te grammatika, häälduse ning foneetika reegleid koos sõnavaraga ei tunne, jääb kuuldav-nähtav teile arusaamatuks. 
-        </p>
-        
-        <h4>
-        Selleks, et arvutiprogrammid üksteist mõistaksid ongi väljaarendatud standardne infovahetuse viis ning arhitektuur, 
-        mida nimetatakse REST APIks.
-        </h4>
-    
-        <p>
-        Kõige tuntumaid viise API ehk rakendusliidese töö ilmestamiseks on nn restoraninäide. 
-        Kujutage korraks ette, et olete restoranis ning soovite tellida uhke prae. 
-        Mõelge, kuidas peate enda soovi köögile edasi andma? Kõige tõhusam viis on seda teha ettekandja abil, 
-        kes tuleb küsib teie käest, mida te süüa soovite, misjärel edastab teie palve köögile ning saabum mõnekümne 
-        minuti pärast tagasi maitsva roaga. Täpselt sama funktsiooni täidab kahe programmi vahel ka rakendusliides. 
-        Nii saab üks programm saata, pärida, muuta või kustutada infot näiteks mõnest teise programmi andmebaasist, kodulehelt või rakendusest. 
-        </p>
-        
-        <h4>
-        Kuid kudias ometi kaks erinevas maailma otsas kirjutatud programmi üksteisest aru saavad?
-        </h4>
-        
-        <p>
-            Informatsiooni vahetamiseks on väljaarendatud erinevaid arhitektuure. 
-            Kuna tõenäoliselt puutute kokku just selle arhitektuuri stiili kasutamisega kõige varem, 
-            selgitame lähemalt ka just RESTful-tõõpi rakendusliideseid. REST (ingl k Representational State Transfer) 
-            kujutab endast tarkvaraarhitektuuri, mis defineerib, kuidas peaks API ehk rakendusliidesega infot teistele programmidele vahetama. 
-            REST arhitektuuri stiil ehk RESTful API on üks enimlevinumaid  ja -kasutatumaid  JavaScript Object Notation ehk JSON 
-            või XML tüüpi failide vahendamise stiile. REST API saab suhelda neljal erineval viisil: saata (post), 
-            pärida (get), muuta (put) või kustutada (delete) teise rakenduse sisu. Kuna teine progamm teab, 
-            missugusel viisil infot oodata, oskab ta lihtsalt sõne kujul olevatest võtmete väärtusest välja lugeda 
-            vajaliku info ning teha vajalikud muutused. 
-        </p>
-        
-        <p>
-            Näiteks saavad kaks programmi omavahel vahetada infot nii: (<b> GTrendsi APIst screenshot</b> / <a href="https://youtu.be/7YcW25PHnAA">video</a>) 
-            Vaata kindlasti ära päises asuv video selelst, kuidas Google Maps või Instagram 
-            enda APIsid kasutada pakuvad!
-        </p>
-        
-        <p>
-            Kas sind huvitab rohkem APIde ajalugu? Leia põnevat informatsiooni siit:
-        </p>
-        <ul>
-            <li>
-                <a href="https://blog.postman.com/intro-to-apis-history-of-apis/">History of APIs</a>
-            </li>
-        </ul>
-    
+<div class="share blog-background">
+  <div class="share blog-container">
+    <h1 class="share block-title">API</h1>
+
+    <div class="share text-block">
+      <p>
+        Application Programming Interface ehk API ehk rakendusliides võib
+        tunduda maagilise tähekombinatsioonina, millest oled varem palju
+        kuulnud, ent selle tegelik sisu või vajalikkus ei pruugi sulle veel
+        päris teada olla. Kahtlemata puutud järgmiste aastate jooksul APIdega
+        ühel või teisel viisil, mistõttu proovime anda põgusa sissejuhatuse
+        millega tegu on.
+      </p>
     </div>
 
-</body>
+    <h2 class="share block-title">Mis on API?</h2>
+
+    <div class="share text-block">
+      <p>
+        Ennekõike on API enimlevniumaid andmevahetusvorme arvutite vahel.
+        Internetipõhises maailmas on arendatud kõikvõimalikud desktopi- ja
+        veebirakendused rakendused inimestele kasutamiseks. Kasutajatel ei ole
+        enamasti erilisi probleeme teksti lugemisega siniselt või valgelt
+        taustalt, samuti ei tohiks font ega teksti suurus osutuda eriliseks
+        takistuseks tekstist arusaamisel. Arvutiprogrammid seejuures jäävad aga
+        üksteisega suheldes hätta, kui nad ei tea, kust või millist infot
+        lugeda. Vahest on sellest lihtsam mõelda kui mõne võõrkeele õppimisest -
+        hiinakeelset intervjuud on põnev kuulata, ent kui te grammatika,
+        häälduse ning foneetika reegleid koos sõnavaraga ei tunne, jääb
+        kuuldav-nähtav teile arusaamatuks.
+      </p>
+
+      <p>
+        Selleks, et arvutiprogrammid üksteist mõistaksid ongi väljaarendatud
+        standardne infovahetuse viis ning arhitektuur, mida nimetatakse REST
+        APIks.
+      </p>
+    </div>
+
+    <h2 class="share block-title">Põhimõte</h2>
+
+    <div class="share text-block">
+      <p>
+        Kõige tuntumaid viise API ehk rakendusliidese töö ilmestamiseks on nn
+        restoraninäide. Kujutage korraks ette, et olete restoranis ning soovite
+        tellida uhke prae. Mõelge, kuidas peate enda soovi köögile edasi andma?
+        Kõige tõhusam viis on seda teha ettekandja abil, kes tuleb küsib teie
+        käest, mida te süüa soovite, misjärel edastab teie palve köögile ning
+        saabub mõnekümne minuti pärast tagasi maitsva roaga. Täpselt sama
+        funktsiooni täidab kahe programmi vahel ka rakendusliides. Nii saab üks
+        programm saata, pärida, muuta või kustutada infot näiteks mõnest teise
+        programmi andmebaasist, kodulehelt või rakendusest.
+      </p>
+    </div>
+
+    <h2 class="share block-title">Kuid kuidas?</h2>
+
+    <div class="share text-block">
+      <p>
+        Kuid kudias ometi kaks erinevas maailma otsas kirjutatud programmi
+        üksteisest aru saavad?
+      </p>
+
+      <p>
+        Informatsiooni vahetamiseks on väljaarendatud erinevaid arhitektuure.
+        Kuna tõenäoliselt puutute kokku just selle arhitektuuri stiili
+        kasutamisega kõige varem, selgitame lähemalt ka just RESTful-tüüpi
+        rakendusliideseid. REST (ingl k Representational State Transfer) kujutab
+        endast tarkvaraarhitektuuri, mis defineerib, kuidas peaks API ehk
+        rakendusliidesega infot teistele programmidele vahetama. REST
+        arhitektuuri stiil ehk RESTful API on üks enimlevinumaid ja
+        -kasutatumaid JavaScript Object Notation ehk JSON või XML tüüpi failide
+        vahendamise stiile. REST API saab suhelda neljal erineval viisil: saata
+        (post), pärida (get), muuta (put) või kustutada (delete) teise rakenduse
+        sisu. Kuna teine progamm teab, missugusel viisil infot oodata, oskab ta
+        lihtsalt sõne kujul olevatest võtmete väärtusest välja lugeda vajaliku
+        info ning teha vajalikud muutused.
+      </p>
+    </div>
+
+    <h2 class="share block-title">Praktiline näide</h2>
+
+    <div class="share text-block">
+      <p>
+        Näiteks saavad kaks programmi omavahel vahetada infot nii: (<b>
+          GTrendsi APIst screenshot</b
+        >
+        / <a href="https://youtu.be/7YcW25PHnAA">video</a>) Vaata kindlasti ära
+        päises asuv video, kuidas Google Maps või Instagram enda APIsid
+        kasutada pakuvad!
+      </p>
+    </div>
+
+    <h2 class="share block-title">Uudishimulik?</h2>
+
+    <div class="share text-block">
+      <p>
+        Kas sind huvitab rohkem APIde ajalugu? Leia põnevat informatsiooni siit:
+      </p>
+      <ul>
+        <li>
+          <a href="https://blog.postman.com/intro-to-apis-history-of-apis/"
+            >History of APIs</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div id="videos-wrapper">
+      <div class="mis-on-api-video-container left">
+        <iframe
+          class="mis-on-api-video"
+          src="https://www.youtube.com/embed/lsMQRaeKNDk"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="mis-on-api-video-container right">
+        <iframe
+          class="mis-on-api-video"
+          src="https://www.youtube.com/embed/7YcW25PHnAA"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
 

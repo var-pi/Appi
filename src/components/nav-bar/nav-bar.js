@@ -10,10 +10,12 @@ export default function (el) {
   const containerDiv = document.getElementById("container");
 
   for (const name in pages) {
-    const a = document.createElement("a");
-    a.href = "/#" + pages[name].route;
-    a.innerHTML = name;
-    containerDiv.appendChild(a);
+    const button = document.createElement("button");
+    button.onclick = () => {
+      location.href = `/#${pages[name].route}`;
+    };
+    button.innerHTML = pages[name].displayName;
+    containerDiv.appendChild(button);
   }
 }
 

@@ -1,7 +1,9 @@
+@import url(/src/global/css/variables.css);
+
 #home-container {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: var(--primary-gradient-background);
   z-index: -5;
 }
 
@@ -11,9 +13,8 @@
   width: fit-content;
   height: fit-content;
   overflow: hidden;
-  /* background-color: transparent; */
-  /* outline: 2px solid #090a0f; */
   transition: border-radius 0.3s, transform 0.3s;
+  transform: scale(100%); /* prevernts overflow of staars-background */
 }
 
 #wrapper-mask:hover {

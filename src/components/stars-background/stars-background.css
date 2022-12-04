@@ -1,8 +1,28 @@
-/* https://codepen.io/mattmarble/pen/qBdamQz */
-html {
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
+/* 
+
+https://codepen.io/mattmarble/pen/qBdamQz 
+
+*/
+
+stars-background #stars-wrapper {
+  position: absolute;
+  z-index: 0;
+}
+
+#stars,
+#stars:after,
+#stars2,
+#stars2:after,
+#stars3,
+#stars3:after {
+  z-index: -1;
+}
+
+#stars,
+#stars2,
+#stars3 {
+  /* margin-top: -2px; */
+  position: fixed;
 }
 
 #stars {

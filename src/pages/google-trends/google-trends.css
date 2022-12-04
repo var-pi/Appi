@@ -1,28 +1,12 @@
-#google{
-    color: rgb(69, 33, 210);
-    font-size: xx-large;
+@import url(/src/global/css/variables.css);
+
+#google-trends-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0 64px 0;
+  color: #ccc;
+  background: var(--primary-gradient-background);
 }
-#google2{
 
-}
-#google3{
-    color: blue;
-    font-size: x-large;
-}
-
-#google4{}
-
-#google5{}
-
-#google6{}
-
-#google7{ 
-    color: blue;
-    font-size: x-large;
-}
-#google8{}
-
-#google9{
-    color: blue;
-    font-size: x-large;
-}
