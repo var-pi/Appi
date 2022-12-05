@@ -14,6 +14,10 @@ export default [
     displayName: "näide",
   },
   {
+    ref: "demo",
+    displayName: "demo",
+  },
+  {
     ref: "google-trends",
     displayName: "google trends",
   },
