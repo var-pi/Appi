@@ -8,6 +8,8 @@ Täpsema ülevaate meie vahlehtede sisust leiate selle projekti Wikist.
 
 Selle projekti meeskonna moodustavad Stefan Ehin, Kevin Kahar ja Karl-Martin Voovere
 
+Selle projekti raames kirjutatud kood kuulub meeskonnaliikmetele, kui ei ole kommenteeritud teisiti.
+
 ## Arendajatele
 
 
