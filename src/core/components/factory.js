@@ -1,3 +1,9 @@
+/*
+
+Genereerib kõikide komponentide klasse.
+
+*/
+
 import paths from "/src/components/paths.js";
 import CustomElement from "/src/core/components/customElement.js";
 
